@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useRef } from 'react';
 import './App.css';
+import Home from './components/Home';
+import Skills from './components/Skills';
+import Navbar from './components/Navbar';
+import AboutMe from './components/About';
+import Project from './components/Project';
+import Contact from './components/Contact';
+import Education from './components/Education';
 
 function App() {
+  const contactRef = useRef(null);
+
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <main>
+        {/* Pass scrollToContact function as a prop to Home */}
+        <Home onHireMeClick={scrollToContact} />
+        <AboutMe />
+        <Skills />
+        <Project />
+        <Education/>
+        {/* Pass the contactRef as a ref prop to Contact */}
+        <Contact contactRef={contactRef} />
+      </main>
     </div>
   );
 }

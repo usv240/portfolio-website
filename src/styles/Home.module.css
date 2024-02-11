@@ -1,0 +1,113 @@
+/* Home.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+.homeSection {
+  background-color: #0a192f; /* Dark blue background */
+  color: #fff; /* White text color */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.introBox {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900; /* Roboto Black */
+  color: #64ffda; /* Bright aqua text for the title */
+  margin-bottom: 20px;
+}
+
+.name {
+  color: #ccd6f6; /* Soft blue for the name */
+}
+
+.subtitle {
+  font-size: 2rem; /* Reduced size for subtitle */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 900; /* Roboto Black */
+  color: #eceef5;
+  margin-top: 20px;
+}
+
+.certification {
+  font-size: 1.2rem; /* Adjusted font size */
+  color: #64ffda; /* Bright aqua for the certification text */
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #8892b0; /* Subdued text color for description */
+  margin-top: 20px;
+  line-height: 1.6; /* Increased line height for better readability */
+  font-size: 1.1rem; /* Adjusted font size */
+}
+
+.hireMeButton {
+  display: inline-block;
+  background-color: transparent;
+  color: #64ffda;
+  border: 2px solid #64ffda; /* Increased border width */
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hireMeButton:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .hireMeButton {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+}
+.description1 {
+  color: #ccd6f6; /* Soft blue color for description */
+  margin-top: 20px;
+  line-height: 1; /* Increased line height for better readability */
+  font-size: 1.3rem; /* Increased font size */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 1000; /* Use normal font weight */
+}
+.description2 {
+  color: #34baa4; /* Soft blue color for description */
+  margin-top: 20px;
+  line-height: 1; /* Increased line height for better readability */
+  font-size: 2rem; /* Increased font size */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 1000; /* Use normal font weight */
+}
+
+.description:last-child {
+  margin-bottom: 20px; /* Add margin to the last description for spacing */
+}

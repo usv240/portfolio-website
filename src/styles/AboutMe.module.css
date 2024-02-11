@@ -1,0 +1,85 @@
+.aboutMeSection {
+    background-color: #0A192F; /* Dark blue background color */
+    color: #8892B0; /* Light grey text color */
+    padding: 100px 0; /* Top and bottom padding */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    min-height: 100vh; /* Make the section at least the height of the viewport */
+
+  }
+  
+  .aboutMeTitle {
+    /* Other styles */
+    margin-top: -50px; /* Reduce this value as well */
+  }
+
+  .aboutMeContent {
+    max-width: 800px;
+    text-align: left; /* Center text horizontally */
+  }
+  
+  .aboutMeContent h2 {
+    font-family: 'Merriweather', serif; /* A more formal font for headings */
+    font-weight: 800; /* Bold font weight for h2 */
+    font-size: 3rem; /* Large font size for 'About Me' */
+    color: #CCD6F6; /* Light blue text color for headings */
+    margin-bottom: 1rem;
+  }
+  
+  .aboutMeContent p {
+    font-family: 'Roboto', sans-serif; /* A modern, clean font for paragraphs */
+    font-weight: 400; /* Normal font weight for p */
+    font-size: 2rem; /* Smaller font size for paragraphs */
+    color: #8892B0; /* Light grey text color for paragraphs */
+    margin-bottom: 1rem;
+    max-width: 700px; 
+  }
+  
+  .aboutMeContent a {
+    color: #64FFDA; /* Bright color for links */
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .aboutMeContent a:hover {
+    color: #64FFDA; /* Same bright color for link hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .hobbiesList {
+    list-style: none; /* Remove default list styling */
+    padding-left: 0; /* Remove default padding */
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+  }
+  
+  .hobbyItem {
+    font-size: 1rem; /* Size for list items */
+    margin-bottom: 0.5rem;
+    color: #8892B0; /* Light grey text color */
+    font-size: 2rem;
+  }
+  
+  .hobbyItem:before {
+    content: '⚡'; /* Lightning bolt before each hobby */
+    margin-right: 10px; /* Space after icon */
+    color: #64FFDA; /* Bright color for icons */
+  }
+  
+  @media (max-width: 768px) {
+    .aboutMeSection {
+      padding: 50px; /* Less padding on smaller screens */
+    }
+  
+    .aboutMeContent h2 {
+      font-size: 2rem; /* Smaller 'About Me' on small screens */
+    }
+  
+    .aboutMeContent p,
+    .hobbyItem {
+      font-size: 0.9rem; /* Smaller text on small screens */
+    }
+  }
+  

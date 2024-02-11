@@ -1,0 +1,39 @@
+/* Education.module.css */
+.education {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: transparent; /* Make background transparent to blend with the page */
+    border-radius: 10px;
+    
+  }
+  
+  .educationItem {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #112240; /* Match the dark theme */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adjust for visibility */
+    color: #ffffff; /* Text color for readability */
+  }
+  
+  .universityIcon {
+    margin-right: 12px;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    color: #64ffda; /* A bright color for the icon, adjust as needed */
+  }
+  
+  /* Education.module.css */
+
+.slideImage {
+    width: 700px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .highlight {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    font-weight: bold; /* Optionally, make the text bold */
+  }
+  
+  /* Add additional styling as needed for headers and text */
+  

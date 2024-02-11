@@ -1,0 +1,94 @@
+/* Projects.css */
+.projects-container {
+  background-color: #0a192f; /* Dark navy background */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.projects-title {
+  margin-bottom: 2rem;
+  font-size: 2rem; /* Increase font size for title */
+  text-align: left;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #112240 0%, #2e3e51 100%); /* Gradient background */
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 1s ease, box-shadow 1s ease; /* Increased transition duration for smoother effect */
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.05); /* Increased lift and scale on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+}
+
+.project-technologies {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+  font-style: italic; /* Italics for technologies */
+}
+
+.project-title {
+  margin: 0.5rem 0;
+  font-size: 1.5rem; /* Increase font size for title */
+}
+
+.project-description {
+  display: none; /* Initially hide the description */
+  font-size: 1rem; /* Font size for description */
+}
+
+.project-card:hover .project-description {
+  display: block; /* Show the description on hover */
+  margin-top: 1rem; /* Add some space */
+}
+
+.project-links {
+  display: none; /* Initially hide the links */
+}
+
+.project-card:hover .project-links {
+  display: flex; /* Show the links on hover */
+  justify-content: center; /* Center the links horizontally */
+  margin-top: 1rem;
+}
+
+.project-links a {
+  color: #64ffda; /* Theme color for links */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem; /* Increase font size for links */
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.git-link {
+  display: none; /* Hide the git link by default */
+}
+
+.project-card:hover .git-link {
+  display: flex; /* Show the git link on hover */
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
