@@ -1,22 +1,26 @@
-/* Projects.css */
 .projects-container {
   background-color: #0a192f; /* Dark navy background */
   color: white;
   padding: 2rem;
   text-align: center;
+  display: flex; /* Center the projects horizontally */
+  flex-direction: column; /* Align items in a column */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
 .projects-title {
   margin-bottom: 2rem;
   font-size: 2rem; /* Increase font size for title */
-  text-align: left;
+  text-align: center; /* Center the title */
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  align-items: stretch;
+  display: flex; /* Display projects in a flex container */
+  gap: 2rem; /* Gap between project cards */
+  align-items: stretch; /* Stretch items to fit container height */
+  justify-content: center; /* Center the projects horizontally */
+  overflow-x: auto; /* Add horizontal scrollbar if projects exceed container width */
 }
 
 .project-card {
@@ -89,6 +93,6 @@
 
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    flex-wrap: wrap; /* Allow projects to wrap to the next row on smaller screens */
   }
 }

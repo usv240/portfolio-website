@@ -7,6 +7,7 @@ import AboutMe from './components/About';
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Education from './components/Education';
+import JobExperience from './components/JobExperience';
 
 function App() {
   const contactRef = useRef(null);
@@ -21,10 +22,12 @@ function App() {
       <main>
         {/* Pass scrollToContact function as a prop to Home */}
         <Home onHireMeClick={scrollToContact} />
+        
         <AboutMe />
         <Skills />
+        <JobExperience />
         <Project />
-        <Education/>
+        <Education />
         {/* Pass the contactRef as a ref prop to Contact */}
         <Contact contactRef={contactRef} />
       </main>

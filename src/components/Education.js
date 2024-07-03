@@ -4,7 +4,7 @@ import styles from '../styles/Education.module.css'; // Make sure this points to
 
 const Education = () => {
   return (
-    <div className={styles.education} >
+    <div id="education" className={styles.education} >
       <h2 style={{ color: 'white',fontSize: '2rem' }}>Education</h2>
       <div className={styles.educationItem}>
         <div>

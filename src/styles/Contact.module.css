@@ -1,60 +1,38 @@
 /* Contact.module.css */
-.contactContainer {
-  background-color: #0a192f; /* Dark navy background */
-  color: #64ffda; /* Teal text color */
-  padding: 50px;
+.contactSection {
+  padding: 2rem;
+  background-color: #0a192f; /* Dark blue background */
+  color: #fff; /* White text color */
   text-align: center;
 }
 
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .contactTitle {
-  font-size: 3em;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .contactDescription {
-  margin-bottom: 40px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
   line-height: 1.5;
-  color: #8892b0; /* Lighter text for the description */
+}
+
+.highlight {
+  color: #64ffda; /* Highlight color */
 }
 
 .formContainer {
-  margin: 20px 0;
-}
-
-/* Style your form inputs and button here */
-/* Example for input fields */
-input[type='text'],
-input[type='email'],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #64ffda;
-  background-color: transparent;
-  color: #64ffda;
-}
-
-input[type='submit'] {
-  background-color: #112240; /* Light navy background for the button */
-  border: 1px solid #64ffda;
-  color: #64ffda;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-input[type='submit']:hover {
-  background-color: #64ffda; /* Teal background on hover */
-  color: #0a192f;
+  margin-bottom: 2rem;
+  /* Add styles for the form inputs if needed */
 }
 
 .socialLinks {
-  margin-top: 40px;
-}
-
-/* Style your social media icons here */
-.socialLinks a {
-  margin: 0 10px;
-  color: #64ffda; /* Teal icons */
-  /* Add more styles for your social media icons */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
