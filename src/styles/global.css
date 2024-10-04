@@ -1,0 +1,71 @@
+/* src/styles/global.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set default background and text styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a192f; /* Dark blue background */
+    color: white;
+    line-height: 1.6;
+  }
+  
+  /* Global container padding */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Anchor tags styles */
+  a {
+    color: #64ffda;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #52e0c4;
+  }
+  
+  /* Utility classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-2 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Media Queries */
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    h1, h2, h3, h4 {
+      font-size: smaller;
+    }
+  }
+  
+  /* For smaller devices like mobile */
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* For large devices like laptops */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  

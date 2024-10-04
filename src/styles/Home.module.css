@@ -1,13 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 
+/* Background gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .homeSection {
-  background-color: #0a192f; /* Dark blue background */
-  color: #fff; /* White text color */
+  /* background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); */
+  background: linear-gradient(to bottom right, #0a192f, #112240);
+  background-size: 200% 200%;
+  animation: gradientBG 10s ease infinite;
+  color: #ffffff;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Intro box fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .introBox {
@@ -16,119 +34,190 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .profilePic {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   margin-bottom: 20px;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
+/* Profile Picture hover */
+.profilePic:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.6);
+}
+
+/* Center content with better spacing */
 .content {
   text-align: center;
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: 900; /* Roboto Black */
-  color: #64ffda; /* Bright aqua text for the title */
-  margin-bottom: 20px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #64ffda;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .name {
-  color: #ccd6f6; /* Soft blue for the name */
+  color: #eceef5;
 }
 
 .subtitle {
-  font-size: 2rem; /* Reduced size for subtitle */
-  font-family: 'Roboto', sans-serif; /* Use Roboto font */
-  font-weight: 900; /* Roboto Black */
-  color: #eceef5;
-  margin-top: 20px;
+  font-size: 2rem;
+  color: #dbe4f3;
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Certifications grid layout */
+.certifications {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 0;
 }
 
 .certification {
-  font-size: 1.2rem; /* Adjusted font size */
-  color: #64ffda; /* Bright aqua for the certification text */
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #64ffda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.awsIcon {
+.certification:hover {
+  transform: scale(1.1);
+}
+
+.awsHighlight, .ociHighlight {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.awsHighlight {
+  background: #232f3e;
+  color: #ffcc00;
+}
+
+.awsHighlight:hover {
+  background: #ffcc00;
+  color: #232f3e;
+  transform: scale(1.05);
+}
+
+.ociHighlight {
+  background: #ffffff;
+  color: #f80000;
+}
+
+.ociHighlight:hover {
+  background: #ffcc00;
+  color: #232f3e;
+  transform: scale(1.05);
+}
+
+.awsIcon, .oracleIcon {
   margin-right: 10px;
+  font-size: 1.5rem;
 }
 
-.oracleIcon {
-  margin-right: 10px;
-  color: #f80000; /* Oracle red */
-}
-
+/* Description and highlights */
 .description1 {
-  color: #ccd6f6; /* Soft blue color for description */
+  color: #ccd6f6;
   margin-top: 20px;
-  line-height: 1.6; /* Increased line height for better readability */
-  font-size: 1.3rem; /* Adjusted font size */
-  font-family: 'Roboto', sans-serif; /* Use Roboto font */
-  font-weight: 1000; /* Use bold font weight */
+  line-height: 1.6;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.highlightText {
+  color: #ffcc00;
+  font-weight: bold;
+  margin: 15px 0;
+  font-size: 1.4rem;
 }
 
 .description2 {
-  color: #34baa4; /* Green color for description */
+  color: #34baa4;
   margin-top: 20px;
-  line-height: 1.6; /* Increased line height for better readability */
-  font-size: 2rem; /* Adjusted font size */
-  font-family: 'Roboto', sans-serif; /* Use Roboto font */
-  font-weight: 1000; /* Use bold font weight */
+  line-height: 1.6;
+  font-size: 1.8rem;
 }
 
+/* Hire Me button */
 .hireMeButton {
-  display: inline-block;
-  background-color: transparent;
-  color: #64ffda;
-  border: 2px solid #64ffda; /* Increased border width */
+  background: linear-gradient(90deg, #ff6347 0%, #ff4757 100%);
+  color: #ffffff;
   padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 40px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 50px;
+  margin-top: 30px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s;
+  opacity: 0;
+  animation: fadeInButton 2s ease-in-out forwards 1s;
 }
 
-.hireMeButton:hover {
-  background-color: #64ffda;
-  color: #0a192f;
-}
-
-.highlight {
-  font-weight: bold;
-  color: #ffcc00; /* Highlight color */
-}
-
-@keyframes fadeIn {
+@keyframes fadeInButton {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
+.hireMeButton:hover {
+  background: #ffffff;
+  color: #0a192f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
   .title {
     font-size: 3rem;
   }
 
   .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
-  .description1 {
-    font-size: 1rem;
+  .description1, .highlightText {
+    font-size: 1.1rem;
   }
 
   .description2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .hireMeButton {
-    padding: 0.8rem 1.6rem;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }
+
+  .certifications {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profilePic {
+  width: 200px;
+  height: 200px;
+  border-radius: 60%;
+  object-fit: cover; /* Ensures the image maintains its aspect ratio and is centered */
+  margin-bottom: 30px;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Profile Picture hover */
+.profilePic:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.6);
 }

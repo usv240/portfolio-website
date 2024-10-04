@@ -1,10 +1,12 @@
 import React from 'react';
-import '../styles/Skills.css'; // Make sure this points to the correct CSS file path
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaPython, FaNodeJs, FaAws, FaDatabase, FaDocker, FaCube, FaPalette, FaTerminal, FaCogs, FaCloud } from 'react-icons/fa'; // Import icons from react-icons library
+import '../styles/Skills.css'; // CSS file
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaPython, FaNodeJs, FaAws, FaDatabase, FaDocker, FaCube, FaPalette, FaTerminal, FaCogs, FaCloud } from 'react-icons/fa'; 
 
 const Skills = () => (
   <div id="skills" className="skills-container">
     <h2 className="skills-title">My Expertise</h2>
+    
+    {/* Front-End Category */}
     <div className="skills-category">
       <h3 className="category-title">Front-End</h3>
       <div className="skills-list front-end">
@@ -14,6 +16,8 @@ const Skills = () => (
         <div className="skill-card"><FaReact className="icon" /> ReactJS</div>
       </div>
     </div>
+
+    {/* Back-End Category */}
     <div className="skills-category">
       <h3 className="category-title">Back-End</h3>
       <div className="skills-list back-end">
@@ -22,6 +26,8 @@ const Skills = () => (
         <div className="skill-card"><FaNodeJs className="icon" /> NodeJS</div>
       </div>
     </div>
+
+    {/* Cloud & Database Category */}
     <div className="skills-category">
       <h3 className="category-title">Cloud & Database</h3>
       <div className="skills-list cloud-database">
@@ -33,6 +39,8 @@ const Skills = () => (
         <div className="skill-card"><FaDatabase className="icon" /> SQL</div>
       </div>
     </div>
+
+    {/* Frameworks & Tools Category */}
     <div className="skills-category">
       <h3 className="category-title">Frameworks & Other Tools</h3>
       <div className="skills-list frameworks-tools">

@@ -1,108 +1,140 @@
-/* Skills.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Roboto', sans-serif; /* Use a Google font for better typography */
-    background-color: #0a192f; /* Set the entire background color */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a192f, #1b2735);
 }
 
+/* Container for skills */
 .skills-container {
-    color: white;
-    padding: 40px;
+    color: #fff;
+    padding: 50px 20px; /* Adjusted padding */
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #112240 0%, #0a192f 100%);
 }
 
+/* Title styling */
 .skills-title {
-    margin-bottom: 40px;
-    font-size: 2.5rem; /* Increase title font size */
+    margin-bottom: 50px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #64ffda;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
 }
 
+.skills-title::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: #64ffda;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+/* Skills category */
 .skills-category {
-    width: 100%; /* Set to full width of the container */
-    margin-bottom: 40px; /* Increase margin for better spacing */
+    width: 100%;
+    margin-bottom: 40px;
+    transition: all 0.3s ease-in-out;
 }
 
 .category-title {
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #112240;
-    padding: 15px; /* Increase padding for better click area */
-    border-radius: 10px; /* Increase border radius for a smoother look */
-    transition: background-color 0.3s;
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
-
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #64ffda;
+    letter-spacing: 1.5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .category-title:hover {
-    background-color: #1d3557; /* Darken the background color on hover */
+    background-color: #1d3557;
+    transform: scale(1.05);
 }
 
+/* Skills list */
 .skills-list {
     display: none;
-    flex-wrap: wrap; /* Allows items to be side by side */
-    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .skills-category:hover .skills-list {
-    display: flex; /* Change to flex to make items side by side */
+    display: flex;
+    animation: fadeIn 0.8s ease;
 }
 
+/* Skill card styling */
 .skill-card {
     background-color: #112240;
     margin: 10px;
-    padding: 15px; /* Increase padding for better spacing */
-    border-radius: 10px; /* Increase border radius for a smoother look */
-    transition: background-color 0.3s;
-    display: flex; /* Ensure skill cards are flex items */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    flex-basis: calc(33.333% - 20px); /* Responsive layout */
 }
 
 .skill-card:hover {
     background-color: #1d3557;
-    transform: scale(1.05); /* Scale up the card on hover for a smooth effect */
+    transform: translateY(-12px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
+/* Icon inside the skill card */
 .skill-card svg {
-    font-size: 2.5rem; /* Increase icon size */
-    margin-right: 10px; /* Add spacing between icon and text */
+    font-size: 3rem;
+    margin-right: 12px;
+    color: #ffcc00;
+    transition: color 0.3s ease;
 }
 
-.skill-card {
-    background-color: #112240;
-    margin: 10px;
-    padding: 15px; /* Increase padding for better spacing */
-    border-radius: 10px; /* Increase border radius for a smoother look */
-    transition: background-color 0.3s;
-    display: flex; /* Ensure skill cards are flex items */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center; /* Center text horizontally */
+.skill-card:hover svg {
+    color: #ffdd00;
 }
 
-.skills-category {
-    width: 100%; /* Set to full width of the container */
-    margin-bottom: 40px; /* Increase margin for better spacing */
-    display: flex;
-    justify-content: center; /* Center the category title horizontally */
+/* Responsive design */
+@media (max-width: 768px) {
+    .skills-title {
+        font-size: 2.5rem;
+    }
+
+    .skill-card {
+        font-size: 1.1rem;
+        padding: 20px 30px;
+        flex-basis: 100%; /* Full width on mobile */
+    }
+
+    .skills-list {
+        flex-direction: column;
+    }
 }
 
-.category-title {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #112240;
-    padding: 15px; /* Increase padding for better click area */
-    border-radius: 10px; /* Increase border radius for a smoother look */
-    transition: background-color 0.3s;
-    text-align: center;
+/* Keyframes for smooth fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

@@ -1,5 +1,7 @@
+// App.js
 import React, { useRef } from 'react';
 import './App.css';
+import './styles/global.css'; // Import the global CSS here
 import Home from './components/Home';
 import Skills from './components/Skills';
 import Navbar from './components/Navbar';
