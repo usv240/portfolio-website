@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FaAws, FaGithub, FaLinkedin } from 'react-icons/fa'; // Added GitHub & LinkedIn icons
-import { SiOracle } from 'react-icons/si'; // Oracle icon
+import { FaGithub, FaLinkedin } from 'react-icons/fa'; 
 import styles from '../styles/Home.module.css';
-import profilePic from '../assets/profile-pic.jpg'; // Profile picture
+import profilePic from '../assets/profile-pic.jpg'; 
 import { TypeAnimation } from 'react-type-animation';
 
 const Home = ({ onHireMeClick }) => {
@@ -11,10 +10,10 @@ const Home = ({ onHireMeClick }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDisplayText(true);
-    }, 2000); // Delay for 2 seconds
+    }, 2000); 
 
     return () => clearTimeout(timer);
-  }, []); // Run only once on component mount
+  }, []); 
 
   return (
     <section id="home" className={styles.homeSection}>

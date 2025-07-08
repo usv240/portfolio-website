@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 import Education from './components/Education';
 import JobExperience from './components/JobExperience';
 import Certifications from './components/Certifications';
-
+import Research from './components/Research';
 
 function App() {
   const contactRef = useRef(null);
@@ -30,6 +30,7 @@ function App() {
         <AboutMe />
         <Skills />
         <JobExperience />
+        <Research />
         <Certifications />
         <Project />
         <Education />

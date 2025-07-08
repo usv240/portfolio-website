@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaUniversity, FaLaptopCode, FaDatabase, FaCloud, FaCode, FaNetworkWired } from 'react-icons/fa'; // Import icons for subjects
-import styles from '../styles/Education.module.css'; // Make sure this points to the correct CSS file path
+import { FaUniversity, FaLaptopCode, FaDatabase, FaCloud, FaCode, FaNetworkWired } from 'react-icons/fa';
+import styles from '../styles/Education.module.css';
 
 const Education = () => {
   return (
@@ -12,6 +12,7 @@ const Education = () => {
         <FaUniversity className={styles.universityIcon} />
         <h3 className={styles.universityName}>University of North Carolina, Charlotte, NC, US</h3>
         <p className={styles.degreeTitle}>Master of Science in Information Technology</p>
+        <p className={styles.duration}><strong>Duration:</strong> Aug 2023 – May 2025</p>
         <p className={styles.gpa}>GPA: 4.0/4.0</p>
         <p className={styles.role}>Graduate Teaching Assistant, Department of Computer Science</p>
         <h4 className={styles.courseworkTitle}>Key Coursework</h4>
@@ -39,6 +40,7 @@ const Education = () => {
         <FaUniversity className={styles.universityIcon} />
         <h3 className={styles.universityName}>Basaveshwar Engineering College, Karnataka, IN</h3>
         <p className={styles.degreeTitle}>Bachelor of Engineering in Computer Science and Engineering</p>
+        <p className={styles.duration}><strong>Duration:</strong> Aug 2016 – Sept 2020</p>
         <p className={styles.gpa}>CGPA: 8.27/10</p>
         <h4 className={styles.courseworkTitle}>Key Coursework</h4>
         <div className={styles.courseworkList}>
