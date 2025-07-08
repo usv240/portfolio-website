@@ -52,7 +52,7 @@ const Projects = () => {
             <span className="project-description">{project.description}</span>
             <div className="project-links">
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="git-link">
-                <FaGithub /> GIT
+                <FaGithub /> github
               </a>
               {project.liveUrl && (
                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
