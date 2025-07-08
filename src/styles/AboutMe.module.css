@@ -166,3 +166,41 @@ html {
     transform: translateY(0); /* Final position */
   }
 }
+.subtitleTyped {
+  font-size: 1.5rem;
+  color: #64ffda;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.quoteBox {
+  margin-top: 2rem;
+  padding: 1.2rem 1.5rem;
+  background-color: rgba(100, 255, 218, 0.1);
+  border-left: 4px solid #64ffda;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #a8b2d1;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nowLine {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #a8b2d1;
+  font-size: 1.2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.quoteBox {
+  margin-top: 2rem;
+  padding: 1.2rem 1.5rem;
+  background-color: rgba(100, 255, 218, 0.1);
+  border-left: 4px solid #64ffda;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #a8b2d1;
+  max-width: 800px;
+  animation: fadeIn 1.5s ease-in-out;
+}

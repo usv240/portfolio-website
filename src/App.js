@@ -10,6 +10,8 @@ import Project from './components/Project';
 import Contact from './components/Contact';
 import Education from './components/Education';
 import JobExperience from './components/JobExperience';
+import Certifications from './components/Certifications';
+
 
 function App() {
   const contactRef = useRef(null);
@@ -28,6 +30,7 @@ function App() {
         <AboutMe />
         <Skills />
         <JobExperience />
+        <Certifications />
         <Project />
         <Education />
         {/* Pass the contactRef as a ref prop to Contact */}

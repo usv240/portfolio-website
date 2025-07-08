@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { FaAws } from 'react-icons/fa'; // AWS icon
+import { FaAws, FaGithub, FaLinkedin } from 'react-icons/fa'; // Added GitHub & LinkedIn icons
 import { SiOracle } from 'react-icons/si'; // Oracle icon
 import styles from '../styles/Home.module.css';
 import profilePic from '../assets/profile-pic.jpg'; // Profile picture
+import { TypeAnimation } from 'react-type-animation';
 
 const Home = ({ onHireMeClick }) => {
   const [displayText, setDisplayText] = useState(false);
@@ -20,35 +21,57 @@ const Home = ({ onHireMeClick }) => {
       <div className={`${styles.introBox} ${displayText ? styles.fadeIn : ''}`}>
         <img src={profilePic} alt="Ujwal Vanjare" className={styles.profilePic} />
         <div className={styles.content}>
-          <h1 className={styles.title}>Hello 👋, I'm <span className={styles.name}>Ujwal Vanjare</span></h1>
+          <h1 className={styles.title}>
+            Hello 👋, I'm <span className={styles.name}>Ujwal Vanjare</span>
+          </h1>
+
           {displayText && (
             <>
-              <p className={styles.subtitle}>Student & Software Developer</p>
-              <div className={styles.certifications}>
-                <div className={`${styles.certification} ${styles.awsHighlight}`}>
-                  <FaAws className={styles.awsIcon} /> AWS - Certified Solutions Architect
-                </div>
-                <div className={`${styles.certification} ${styles.ociHighlight}`}>
-                  <SiOracle className={styles.oracleIcon} /> OCI 2024 Architect Associate
-                </div>
-                <div className={styles.certification}>
-                  <SiOracle className={styles.oracleIcon} /> Oracle Autonomous Database Professional
-                </div>
-                <div className={styles.certification}>
-                  <SiOracle className={styles.oracleIcon} /> Oracle Generative AI 2024 Professional
-                </div>
-                <div className={styles.certification}>
-                  <SiOracle className={styles.oracleIcon} /> OCI 2023 Foundations Associate
-                </div>
-              </div>
+              <TypeAnimation
+                sequence={[
+                  'Cloud Engineer',
+                  2000,
+                  'Backend Developer',
+                  2000,
+                  'Certified Solutions Architect',
+                  2000,
+                  'AWS | OCI | Java | Python',
+                  2000,
+                ]}
+                wrapper="p"
+                speed={40}
+                className={styles.subtitle}
+                repeat={Infinity}
+              />
+
               <p className={styles.description1}>
-                As a Cloud Solutions Engineer Intern, I specialize in building scalable and efficient cloud architectures, developing Restful APIs, and creating responsive web applications.
+                Backend & Cloud Engineer | UNC Charlotte Grad
               </p>
-              <p className={styles.highlightText}>
-                I have <span className={styles.highlight}>close to 3 years of industry experience</span>.
+              <p className={styles.description2}>
+                Building scalable APIs & cloud-native apps with reliability in mind.
               </p>
-              <p className={styles.description2}>I am currently looking for Full-Time roles in 2024.</p>
+
+
               <button onClick={onHireMeClick} className={styles.hireMeButton}>Hire Me --!</button>
+
+              <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
+                <a
+                  href="https://github.com/usv240"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#ffffff', fontSize: '1.5rem' }}
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://linkedin.com/in/ujwalvanjare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#ffffff', fontSize: '1.5rem' }}
+                >
+                  <FaLinkedin />
+                </a>
+              </div>
             </>
           )}
         </div>

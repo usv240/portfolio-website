@@ -1,0 +1,50 @@
+.certificationsSection {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #00e0c6;
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.certCard {
+  background-color: #1c1f2e;
+  color: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.certCard:hover {
+  transform: translateY(-5px);
+}
+
+.aws {
+  background-color: #232f3e;
+  color: #fbbf24;
+}
+
+.oci {
+  background-color: #fff;
+  color: #e60000;
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 1.3rem;
+}
