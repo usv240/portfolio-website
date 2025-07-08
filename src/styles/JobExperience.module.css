@@ -1,124 +1,271 @@
-/* JobExperience.module.css */
-
-/* General styles */
-.jobExperienceSection {
+.experienceSection {
   padding: 4rem 2rem;
-  text-align: center;
-  background-color: #0a192f; /* Keep the main section background dark for contrast */
+  background-color: #0a192f;
+  color: #ffffff;
 }
 
-.jobExperienceTitle {
-  font-size: 3rem;
-  margin-bottom: 40px;
+.sectionTitle {
+  font-size: 2.5rem;
   color: #64ffda;
-  letter-spacing: 1.5px;
-  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.jobExperienceTitle::after {
-  content: '';
-  width: 80px;
-  height: 3px;
-  background-color: #64ffda;
-  display: block;
-  margin: 0.5rem auto;
-}
-
-/* Job content container */
-.jobExperienceContent {
+.container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  animation: fadeIn 0.8s ease-in-out;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Individual job card */
-.jobCard {
-  background-color: #1a2a3a; /* Lightened from #112240 to #1a2a3a */
-  border-radius: 15px;
-  padding: 25px;
-  width: 320px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.jobCard:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
-}
-
-/* Company container */
-.company {
+.jobRow {
   display: flex;
-  align-items: center;
-  font-size: 1.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid #1f3548;
+  padding-bottom: 2rem;
+}
+
+.left {
+  flex: 1;
+  max-width: 350px;
+}
+
+.right {
+  flex: 2;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.8rem;
+  object-fit: contain;
+}
+
+.role {
   font-weight: bold;
-  color: #ffdd57;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
 }
 
-/* Company logo */
-.companyLogo {
-  width: 35px;
-  height: 35px;
-  margin-right: 12px;
-}
-
-/* Job title */
-.jobTitle {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #ffffff; /* Changed from #ccd6f6 to white for better contrast */
-  margin-bottom: 10px;
-}
-
-/* Duration and description */
 .duration {
-  font-size: 1rem;
-  color: #a0b3c1; /* Lightened from #8892b0 for better readability */
-  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #a0b3c1;
+  margin-bottom: 0.8rem;
 }
 
-.jobDescription {
-  font-size: 1rem;
-  color: #a0b3c1; /* Lightened from #8892b0 */
+.skills {
+  font-size: 0.95rem;
+  color: #a0b3c1;
+}
+
+.company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #64ffda;
+}
+
+.location {
+  color: #8892b0;
+  font-weight: 400;
+}
+
+.bulletList {
+  margin-top: 0.5rem;
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: #ccd6f6;
   line-height: 1.6;
 }
 
-/* Responsive design for mobile */
 @media (max-width: 768px) {
-  .jobExperienceContent {
+  .jobRow {
     flex-direction: column;
-    align-items: center;
   }
 
-  .jobCard {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .jobExperienceTitle {
-    font-size: 2.5rem;
-  }
-
-  .company, .jobTitle {
-    font-size: 1.3rem;
-  }
-
-  .duration, .jobDescription {
-    font-size: 0.9rem;
+  .left, .right {
+    max-width: 100%;
   }
 }
+.jobRow {
+  position: relative;
+  border-left: 3px solid #64ffda;
+  padding-left: 2rem;
+  margin-left: 1rem;
+}
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.jobRow::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #64ffda;
+  border-radius: 50%;
+}
+.logo {
+  position: relative;
+  cursor: pointer;
+}
+
+.logo::after {
+  content: attr(alt);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0a192f;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+  font-size: 0.75rem;
+}
+
+.logo:hover::after {
+  opacity: 1;
+}
+.tag {
+  display: inline-block;
+  background-color: #112240;
+  color: #64ffda;
+  padding: 2px 8px;
+  margin: 4px 4px 0 0;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+.tags {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #112240;
+  color: #64ffda;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin: 4px 6px 0 0;
+  white-space: nowrap;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  background-color: #0f2c3e;
+}
+.experienceSection {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, rgba(100, 255, 218, 0.05), rgba(10, 25, 47, 1));
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 6px #64ffda);
+  transform: scale(1.05);
+}
+
+.tags {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #112240;
+  color: #64ffda;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.logo {
+
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 6px #64ffda);
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 80px;        /* increased from 40px */
+  height: 80px;       /* increased from 40px */
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 8px #64ffda);
+  transform: scale(1.1);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tag {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.tag:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+  transform: scale(1.05);
+}
+
+.bulletList {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+}
+
+.bulletList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.bulletList li:hover {
+  color: #64ffda;
+  transform: translateX(5px);
+}
+
+.bulletIcon {
+  color: #64ffda;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.bulletText {
+  flex: 1;
 }
