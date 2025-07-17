@@ -1,0 +1,43 @@
+[
+  
+  {
+    "category": "Back-End",
+    "skills": [
+      { "name": "Java", "icon": "FaJava" },
+      { "name": "Python", "icon": "FaPython" },
+      { "name": "NodeJS", "icon": "FaNodeJs" }
+    ]
+  },
+  {
+    "category": "Frameworks & Other Tools",
+    "skills": [
+      { "name": "SpringBoot", "icon": "SiSpring" },
+      { "name": "Docker", "icon": "SiDocker" },
+      { "name": "Kubernetes", "icon": "SiKubernetes" },
+      { "name": "Design Patterns", "icon": "FaCogs" },
+      { "name": "Shell Scripting", "icon": "FaTerminal" },
+      { "name": "C/C++", "icon": "SiCplusplus" }
+    ]
+  },
+  {
+    "category": "Cloud & Database",
+    "skills": [
+      { "name": "AWS", "icon": "FaAws" },
+      { "name": "Oracle Cloud Infrastructure (OCI)", "icon": "SiOracle" },
+      { "name": "MySQL", "icon": "SiMysql" },
+      { "name": "PostgreSQL", "icon": "SiPostgresql" },
+      { "name": "MongoDB", "icon": "SiMongodb" },
+      { "name": "SQL", "icon": "FaDatabase" }
+    ]
+  },
+  
+  {
+    "category": "Front-End",
+    "skills": [
+      { "name": "HTML", "icon": "DiHtml5" },
+      { "name": "CSS", "icon": "DiCss3" },
+      { "name": "JavaScript", "icon": "DiJavascript1" },
+      { "name": "ReactJS", "icon": "FaReact" }
+    ]
+  }
+]

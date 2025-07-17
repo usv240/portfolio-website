@@ -1,58 +1,73 @@
+// Skills.jsx (with original icons + brand colors)
 import React from 'react';
-import '../styles/Skills.css'; // CSS file
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaPython, FaNodeJs, FaAws, FaDatabase, FaDocker, FaCube, FaPalette, FaTerminal, FaCogs, FaCloud } from 'react-icons/fa'; 
+import skillsData from '../data/skills.json';
+import * as FaIcons from 'react-icons/fa';
+import * as SiIcons from 'react-icons/si';
+import * as DiIcons from 'react-icons/di';
+import '../styles/Skills.css';
 
-const Skills = () => (
-  <div id="skills" className="skills-container">
-    <h2 className="skills-title">My Expertise</h2>
-    
-    {/* Front-End Category */}
-    <div className="skills-category">
-      <h3 className="category-title">Front-End</h3>
-      <div className="skills-list front-end">
-        <div className="skill-card"><FaHtml5 className="icon" /> HTML</div>
-        <div className="skill-card"><FaCss3Alt className="icon" /> CSS</div>
-        <div className="skill-card"><FaJs className="icon" /> JavaScript</div>
-        <div className="skill-card"><FaReact className="icon" /> ReactJS</div>
+const AllIcons = {
+  ...FaIcons,
+  ...SiIcons,
+  ...DiIcons,
+};
+
+const brandColors = {
+  FaJava: '#f89820',
+  FaPython: '#3776AB',
+  FaNodeJs: '#68A063',
+  FaReact: '#61DBFB',
+  DiHtml5: '#e34c26',
+  DiCss3: '#2965f1',
+  DiJavascript1: '#f0db4f',
+  SiDocker: '#2496ED',
+  SiKubernetes: '#326ce5',
+  SiMysql: '#00758f',
+  SiPostgresql: '#336791',
+  SiMongodb: '#4DB33D',
+  SiOracle: '#f80000',
+  FaAws: '#ff9900',
+  SiSpring: '#6db33f',
+  SiCplusplus: '#004482',
+  FaDatabase: '#a9a9a9',
+  FaTerminal: '#ffffff',
+  FaCogs: '#cccccc',
+};
+
+const Skills = () => {
+  const renderSkillPill = (skill, idx) => {
+    const Icon = AllIcons[skill.icon] || FaIcons.FaCode;
+    const color = brandColors[skill.icon] || '#38bdf8';
+
+    return (
+      <div key={idx} className="skill-pill">
+        <Icon className="skill-icon" style={{ color }} />
+        <span>{skill.name}</span>
+      </div>
+    );
+  };
+
+  const renderCategory = (category, idx) => (
+    <div key={idx} className="skill-box">
+      <h3 className="skill-box-title">{category.category}</h3>
+      <div className="skills-grid">
+        {category.skills.map(renderSkillPill)}
       </div>
     </div>
+  );
 
-    {/* Back-End Category */}
-    <div className="skills-category">
-      <h3 className="category-title">Back-End</h3>
-      <div className="skills-list back-end">
-        <div className="skill-card"><FaJava className="icon" /> Java</div>
-        <div className="skill-card"><FaPython className="icon" /> Python</div>
-        <div className="skill-card"><FaNodeJs className="icon" /> NodeJS</div>
+  const leftBranch = skillsData.slice(0, 2);
+  const rightBranch = skillsData.slice(2);
+
+  return (
+    <div id="skills" className="skills-section">
+      <div className="skills-header">MY SKILLS</div>
+      <div className="skills-tree">
+        <div className="skills-column">{leftBranch.map(renderCategory)}</div>
+        <div className="skills-column">{rightBranch.map(renderCategory)}</div>
       </div>
     </div>
-
-    {/* Cloud & Database Category */}
-    <div className="skills-category">
-      <h3 className="category-title">Cloud & Database</h3>
-      <div className="skills-list cloud-database">
-        <div className="skill-card"><FaAws className="icon" /> AWS (EC2, S3, DynamoDB, RDS, Lambda, CloudFormation)</div>
-        <div className="skill-card"><FaCloud className="icon" /> Oracle Cloud Infrastructure (OCI)</div>
-        <div className="skill-card"><FaDatabase className="icon" /> MySQL</div>
-        <div className="skill-card"><FaDatabase className="icon" /> PostgreSQL</div>
-        <div className="skill-card"><FaDatabase className="icon" /> MongoDB (NoSQL)</div>
-        <div className="skill-card"><FaDatabase className="icon" /> SQL</div>
-      </div>
-    </div>
-
-    {/* Frameworks & Tools Category */}
-    <div className="skills-category">
-      <h3 className="category-title">Frameworks & Other Tools</h3>
-      <div className="skills-list frameworks-tools">
-        <div className="skill-card"><FaPalette className="icon" /> SpringBoot</div>
-        <div className="skill-card"><FaDocker className="icon" /> Docker</div>
-        <div className="skill-card"><FaCube className="icon" /> Kubernetes</div>
-        <div className="skill-card"><FaCogs className="icon" /> Design Patterns</div>
-        <div className="skill-card"><FaTerminal className="icon" /> Shell Scripting</div>
-        <div className="skill-card"><FaCogs className="icon" /> C/C++</div>
-      </div>
-    </div>
-  </div>
-);
+  );
+};
 
 export default Skills;

@@ -28,7 +28,8 @@ function App() {
         <Home onHireMeClick={scrollToContact} />
         
         <AboutMe />
-        <Skills />
+        <Skills /> 
+        {/* <AnimatedBubbleSkills /> */}
         <JobExperience />
         <Research />
         <Certifications />

@@ -30,7 +30,7 @@ const Certifications = () => {
 
   return (
     <div id="certifications" className={styles.certificationsSection}>
-      <h2 className={styles.heading}>Certifications</h2>
+      <h2 className={styles.heading}>CERTIFICATIONS & ACCREDITATIONS</h2>
       <div className={styles.certificationsGrid}>
         {certs.map((cert, index) => (
           <a
