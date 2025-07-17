@@ -1,0 +1,69 @@
+[
+  {
+    "title": "AWS Certified Solutions Architect – Associate",
+    "link": "https://drive.google.com/file/d/1mEBfbZmoeYWURlz3dBGNC_oQeR108CtX/view?usp=drive_link",
+    "provider": "aws",
+    "badge": "/badges/aws-certified-solutions-architect-associate.png"
+  },
+  {
+    "title": "AWS Certified Developer – Associate",
+    "link": "https://drive.google.com/file/d/1TgPboDcAkmV9G4BZnOD9axHoq_0wBdT7/view?usp=drive_link",
+    "provider": "aws",
+    "badge": "/badges/aws-certified-developer-associate.png"
+  },
+  {
+    "title": "Oracle Cloud Infrastructure 2024 Certified Architect Associate",
+    "link": "https://drive.google.com/file/d/1FjPsN4FGh0G3Lxy0bi4pnavyy-khBXl3/view?usp=drive_link",
+    "provider": "oracle",
+    "badge": "/badges/Oracle Cloud Infrastructure 2024 Certified Architect Associate_badge.jpg"
+  },
+  {
+    "title": "Introduction to Kubernetes – LFS158",
+    "link": "https://drive.google.com/file/d/1zBdSGTLOgD3INz4aBX42o3XA2ZQRpCz0/view?usp=sharing",
+    "provider": "linuxfoundation",
+    "badge": "/badges/lfs158-introduction-to-kubernetes.png"
+  },
+  {
+    "title": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
+    "link": "https://drive.google.com/file/d/1SfQLipQ46IJBlKwa9SJUfQpUK738cIyL/view?usp=drive_link",
+    "provider": "oracle",
+    "badge": "/badges/Oracle Cloud Infrastructure 2024 Generative AI Certified Professional_Badge.jpg"
+  },
+  {
+    "title": "Oracle AI Vector Search Certified Professional",
+    "link": "https://drive.google.com/file/d/1hZcuLPg53V6ThM08hUC2tUD_rwhoNdA1/view?usp=drive_link",
+    "provider": "oracle",
+    "badge": "/badges/Oracle AI Vector Search Certified Professional.jpg"
+  },
+  {
+    "title": "Oracle Autonomous Database Cloud 2023 Certified Professional",
+    "link":  "https://drive.google.com/file/d/1iPP1-LtBBjjBoPfeIl_0m9t4s_Z_Vfxx/view?usp=drive_link",
+    "provider": "oracle",
+    "badge": "/badges/Oracle Autonomous Database Cloud 2023 Certified Professional_Badge (1).jpg"
+  },
+  {
+    "title": "Oracle Cloud Success Navigator Essentials",
+    "link": "https://drive.google.com/file/d/1FYx6akR3ITaPETVluyTtdhNezOKrtx6K/view?usp=drive_link",
+    "provider": "oracle",
+    "badge": "/badges/Oracle Cloud Success Navigator Essentials.png"
+  },
+  {
+    "title": "Oracle Fusion Cloud Applications ERP Certified Foundations Associate",
+    "link": "https://drive.google.com/file/d/1eteD1rmD4G9gl10ZsNN_lACTb1b-qDQ9/view?usp=sharing",
+    "provider": "oracle",
+    "badge": "/badges/Oracle Fusion Cloud Applications ERP Process Essentials Certified - Rel 1.jpg"
+  },
+  {
+    "title": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+    "link": "https://drive.google.com/file/d/1poPkT6Rh--zVTx29jgwvRsxfLTe0ZEXO/view?usp=drive_link",
+    "provider": "oracle",
+    "badge": "/badges/Oracle Cloud Infrastructure 2023 Certified Foundations Associate_badge.jpg"
+  },
+  
+  {
+    "title": "Introduction to GitOps – LFS169",
+    "link": "https://drive.google.com/file/d/1xBjG3eTGlaorZ8fPCTCAMR03k_0Gha-_/view?usp=sharing",
+    "provider": "linuxfoundation",
+    "badge": "/badges/lfs169-introduction-to-gitops.png"
+  }
+]
